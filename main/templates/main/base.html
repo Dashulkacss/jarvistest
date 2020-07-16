@@ -5,52 +5,39 @@
     <title>{% block title %}{% endblock %}</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://use.fontawesome.com/releases/v5.0.0/css/all.css" rel="stylesheet">
-
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
 </head>
 
 <body>
-{% block body %}{% endblock %}
-    <footer>
-        <div class="footer container-smal">
-            <div class="footer-contact-us">
-                <h1 class="footer-h1">contact us</h1>
-                <p>132A Bridge Road Richmond VIC Australia.</p>
-                <p>Talk to us on 1300 132 <br>info@interior.com</p>
-            </div>
-            <div class="footer-useful-information">
-                <h1 class="footer-h1">useful information</h1>
-                <div>
-                    <a href="#">Sales terms</a>
-                    <a href="#">Architect accounts</a>
-                    <a href="#">Customer care</a>
-                    <a href="#">Careers</a>
-                    <a href="#">Delivery</a>
-                    <a href="#">Exchanges & returns</a>
-                </div>
-            </div>
-            <div class="footer-lets-stay-in-touch">
-                <h1 class="footer-h1">let's stay in touch!</h1>
-                <p>Suscribe to know about our latest news, products and special offers just for suscribers.</p>
-                <form action="#">
-                    <input type="email" placeholder="your email address">
-                    <button type="submit" class="footer-button">
-                        <i class="fab fa-telegram-plane"></i>
-                    </button>
-                </form>
-            </div>
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <a class="navbar-brand" href="#">Tasks</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="{% url 'home' %}">My tasks <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'create' %}">New Task</a>
+        </li>
+<!--        <li class="nav-item">-->
+<!--          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>-->
+<!--        </li>-->
+      </ul>
+      <form class="form-inline mt-2 mt-md-0">
+        <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form>
+    </div>
+  </nav>
+<!--<ul class="menu">-->
+<!--                    <li class="menu-list"><a href="{% url 'home' %}" class="menu-link menu-link-active">My tasks</a></li>-->
+<!--                    <li class="menu-list"><a href="{% url 'create' %}" class="menu-link">New Task</a></li>>-->
+<!--</ul>-->
+<!--    <div class="container">-->
+{% block body %}
+{% endblock %}
 
-            <div class="bottom-part">
-                <p>&copy; Copyright - INTERIOR 2016. All Rights Reserved.</p>
-                <div class="soc-icons">
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-google-plus-g"></i></a>
-                    <a href="#"><i class="fab fa-pinterest-p"></i></a>
-                </div>
-                <div class="privacy-terms">
-                    <a href="#">Terms & Conditions</a> / <a href="">Privacy policy & Cookies</a>
-                </div>
-            </div>
-        </div>
-    </footer>
 </body></html>

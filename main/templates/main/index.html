@@ -1,28 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends 'main/base.html' %}
 
-<head>
-    <meta charset="UTF-8">
-    <title>Home | INTERIOR</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://use.fontawesome.com/releases/v5.0.0/css/all.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;700&display=swap" rel="stylesheet">
-</head>
+{% block title %}
+Мои задачи
+{% endblock %}
 
-<body>
-<ul class="menu">-->
-                    <li class="menu-list"><a href="{% url 'home' %}" class="menu-link menu-link-active">HOME</a></li>
-                    <li class="menu-list"><a href="{% url 'create' %}" class="menu-link">MAKE TASKS</a></li>
-<!--                    <li class="menu-list"><a href="#" class="menu-link">HISTORY</a></li>-->
-<!--                    <li class="menu-list"><a href="#" class="menu-link">SHOWROOM</a></li>-->
-<!--                    <li class="menu-list"><a href="{% url 'contacts' %}" class="menu-link"> CONTACT</a></li>-->
-<!--                    <li class="menu-list"><a href="#" class="menu-link"> <img src="img/search.svg" alt="search"></a></li>-->
-</ul>
-<!--    <div class="container">-->
-        {{ title }}
-        <h2>База данных:</h2>
-        {% if tasks %}
-            {% for el in tasks %}
+{% block body %}
+    {{ title }}
+    <h2>Мои задачи:</h2>
+    {% if tasks %}
+    {% for el in tasks %}
                 <div>
                     <h3>{{ el.title }}</h3>
                     <p>{{ el.task }}</p>
@@ -31,6 +17,8 @@
         {% else %}
             <p>No tasks</p>
         {% endif %}
+
+{% endblock %}
 
 <!--        <div class="slider">-->
 <!--            <div class="header clearfix container-smal">-->
@@ -261,4 +249,3 @@
 <!--        </div>-->
 <!--    </footer>-->
 
-</body></html>
