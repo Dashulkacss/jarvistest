@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create</title>
+</head>
+<body>
+    <h1>Create Task</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.title }}<br>
+        {{ form.task }}<br>
+<!--        <input type="text" placeholder="Your name">-->
+<!--        <textarea placeholder="Введите описание"></textarea><br>-->
+        <button type="submit">Добавить</button>
+        <span>{{ error }}</span>
+    </form>
+</body>
+</html>

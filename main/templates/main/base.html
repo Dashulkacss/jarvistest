@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://use.fontawesome.com/releases/v5.0.0/css/all.css" rel="stylesheet">
+
+</head>
+
+<body>
+{% block body %}{% endblock %}
+    <footer>
+        <div class="footer container-smal">
+            <div class="footer-contact-us">
+                <h1 class="footer-h1">contact us</h1>
+                <p>132A Bridge Road Richmond VIC Australia.</p>
+                <p>Talk to us on 1300 132 <br>info@interior.com</p>
+            </div>
+            <div class="footer-useful-information">
+                <h1 class="footer-h1">useful information</h1>
+                <div>
+                    <a href="#">Sales terms</a>
+                    <a href="#">Architect accounts</a>
+                    <a href="#">Customer care</a>
+                    <a href="#">Careers</a>
+                    <a href="#">Delivery</a>
+                    <a href="#">Exchanges & returns</a>
+                </div>
+            </div>
+            <div class="footer-lets-stay-in-touch">
+                <h1 class="footer-h1">let's stay in touch!</h1>
+                <p>Suscribe to know about our latest news, products and special offers just for suscribers.</p>
+                <form action="#">
+                    <input type="email" placeholder="your email address">
+                    <button type="submit" class="footer-button">
+                        <i class="fab fa-telegram-plane"></i>
+                    </button>
+                </form>
+            </div>
+
+            <div class="bottom-part">
+                <p>&copy; Copyright - INTERIOR 2016. All Rights Reserved.</p>
+                <div class="soc-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-google-plus-g"></i></a>
+                    <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                </div>
+                <div class="privacy-terms">
+                    <a href="#">Terms & Conditions</a> / <a href="">Privacy policy & Cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body></html>
